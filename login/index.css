@@ -1,0 +1,17 @@
+body {
+    background-image: url("wallpaper3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color:darkred;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+form{
+    font-style: italic;
+    color: darkmagenta;
+}
+.list{
+font-size: larger;
+
+}
