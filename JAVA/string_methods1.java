@@ -6,5 +6,6 @@ public class Main
 	   System.out.println(s1.toUpperCase());
 	   System.out.println(s2.toLowerCase());
 	   System.out.println(s2.trim());
+	   System.out.println(s1.substring(1,10));
 	}
 }
