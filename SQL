@@ -1,0 +1,45 @@
+create database my_sql;
+create table lists(sno int , product_name varchar(10) , cost int);
+insert into lists values (1,"book",300),(2,"pen",50),(3,"bag",800),(4,"bottle",250),(5,"shoes",1200);
+select *from lists;
+select cost from lists;
+select * from lists where cost > 100;
+select * from lists where cost < 100;
+select * from lists where cost = 800;
+select * from lists where cost between 200 and 1000;
+select * from lists where product_name like "b%";
+select * from lists where product_name like "%b";
+select * from lists where product_name like "%b%";
+select * from lists where product_name like "_b%";
+select * from lists where product_name like "b_%";
+
+select * from lists order by product_name;
+update lists set product_name = "my_orders";
+update lists set product_name = "my_orders" where cost < 200;
+delete lists where cost < 100;
+
+select top 3 * from lists;
+select max(cost) as morecost from lists;
+select min(cost) as lesscost from lists;
+select count(product_name) from lists;
+select avg(cost) from lists;
+select sum(cost) from lists;
+
+select product_name as products from lists;
+select lists.sno , order.items from lists inner join order on lists.sno1 = order.sno1;
+select lists.sno , order.items from lists left join order on lists.sno1 = order.sno1;
+select lists.sno , order.items from lists right join order on lists.sno1 = order.sno1;
+select lists.sno , order.items from lists full outer join order on lists.sno1 = order.sno1;
+
+select product_name from lists union select items from order;
+select count(sno),product_name from lists group by product_name;
+select count(cost),product_name from lists group by product_name order by count(sno) desc;
+select count(product_name) from lists group by product_name having count(cost) > 400;
+
+drop database my_sql;
+backup database my_sql to disk = "study material";
+alter table lists add quantity int;
+alter table lists drop quantity int;
+
+create table products (id int not null primary key, goods varchar(10) not null);
+
